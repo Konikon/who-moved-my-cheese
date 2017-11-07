@@ -13,9 +13,12 @@ const itemSchema = new Schema({
   date: {
     type: Date,
     default: Date.now
-  }
+  },
   price: {
-    type: String,
-    
+    type: Number,
+    required: true,
+
   }
 })
+
+module.exports = mongoose.model("Item", itemSchema);
